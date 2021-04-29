@@ -1,0 +1,22 @@
+.detailListTitle{
+    font-size: 20px;
+    color: #1890ff;
+    padding-right: 20px;
+    overflow: hidden;
+}
+.detailListText{
+    font-size: 20px;
+    color: cadetblue;
+}
+.detailList{
+    margin-top: 20px;
+    li{
+        display: block;
+        img{
+            width: 300px !important;
+        }
+    }
+    .detailListdetail{
+        padding-left: 100px;
+    }
+}

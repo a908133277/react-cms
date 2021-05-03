@@ -95,10 +95,11 @@ export default class index extends Component {
         let responce = await addCategory(categoryName,parentId)
         if(responce.data.status===0){
             message.success('添加数据成功')
+            console.log(responce)
             if(parentId===0){ //向category数据中添加新添加的数据
-                this.state.categorys = [{_id:parentId,name:categoryName},...this.state.categorys]
+                this.state.categorys = [{...responce.data.data},...this.state.categorys]
             }else{
-                this.state.childrenCategory = [{_id:parentId,name:categoryName},...this.state.childrenCategory]
+                this.state.childrenCategory = [{...responce.data.data},...this.state.childrenCategory]
             }
             this.setState({})
         }else{
